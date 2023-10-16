@@ -1,19 +1,19 @@
 server {
         root /var/www/html/;
-        autoindex on;
+        #autoindex on;
         index index.php index.html index.htm index.nginx-debian.html;
         server_name example.com www.example.com;
 
-        location ~ ^/cake3/.+\.(jpg|jpeg|gif|png|ico|js|css)$ {
-                rewrite ^/cake3/rd_cake/webroot/(.*)$ /cake3/rd_cake/webroot/$1 break;
-                rewrite ^/cake3/rd_cake/(.*)$ /cake3/rd_cake/webroot/$1 break;
+        location ~ ^/cake4/.+\.(jpg|jpeg|gif|png|ico|js|css)$ {
+                rewrite ^/cake4/rd_cake/webroot/(.*)$ /cake4/rd_cake/webroot/$1 break;
+                rewrite ^/cake4/rd_cake/(.*)$ /cake4/rd_cake/webroot/$1 break;
                 access_log off;
                 expires max;
                 add_header Cache-Control public;
         }
-        location /cake3/rd_cake {
-                rewrite ^/cake3/rd_cake(.+)$ /cake3/rd_cake/webroot$1 break;
-                try_files $uri $uri/ /cake3/rd_cake/index.php$is_args$args;
+        location /cake4/rd_cake {
+                rewrite ^/cake4/rd_cake(.+)$ /cake4/rd_cake/webroot$1 break;
+                try_files $uri $uri/ /cake4/rd_cake/index.php$is_args$args;
         }
 
         location / {
