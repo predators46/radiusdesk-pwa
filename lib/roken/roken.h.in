@@ -188,8 +188,8 @@ struct sockaddr_dl;
 #ifdef HAVE_SYS_TYPES_H
 #include <sys/types.h>
 #endif
-#ifdef HAVE_SYS_ERRNO_H
-#include <sys/errno.h>
+#ifdef HAVE_ERRNO_H
+#include <errno.h>
 #endif
 #ifdef HAVE_SYS_BITYPES_H
 #include <sys/bitypes.h>
